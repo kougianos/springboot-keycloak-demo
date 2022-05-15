@@ -11,12 +11,18 @@ Keycloak server steps required:
 
 The Keycloak server used in this app is deployed on https://20.231.88.141
 
+---
+
+Now that we have set up everything required on the Keycloak Server side, we need to generate an access token that will be used as an Authentication Header.
+
 Generate token:
 - POST https://20.231.88.141/auth/realms/demo/protocol/openid-connect/token  
 
+```
 Body www-form-urlencoded  
 
 client_id: demo-app  
 grant_type: password  
 username: test  
 password: test
+```
