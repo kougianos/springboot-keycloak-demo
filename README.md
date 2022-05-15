@@ -5,4 +5,18 @@ Keycloak steps:
 - Create a new role with name "user"
 - Create a new user with credentials test/test and assign "user" role
 
+Generate token:
+- POST https://20.231.88.141/auth/realms/demo/protocol/openid-connect/token  
+
+Body www-form-urlencoded  
+
+client_id: demo-app  
+grant_type: password  
+username: test  
+password: test
+
+
+
+
+
 
