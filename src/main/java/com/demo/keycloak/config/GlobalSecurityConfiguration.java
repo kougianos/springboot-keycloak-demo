@@ -53,7 +53,8 @@ public class GlobalSecurityConfiguration extends KeycloakWebSecurityConfigurerAd
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
         http.authorizeRequests()
-                .antMatchers("/hello").authenticated()
+                .antMatchers("/hello")
+                .hasRole("user")
                 .anyRequest().permitAll();
     }
 }
