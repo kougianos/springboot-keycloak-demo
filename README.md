@@ -2,11 +2,11 @@ This repo showcases the minimum configuration and code required for a Spring boo
 It is assumed that a Keycloak Server is already set up, and an admin user has been created, in order to perform the steps described below.
 
 Keycloak server steps required:
-- Log in to Admin Console
-- Create a new realm named {demo}
-- Create a new client named {demo-app} with public access type, set its Valid Redirect URIs to * (not recommended for Production services)
-- Create a new role with name {user}
-- Create a new user with credentials {test}/{test} and assign {user} role
+1. Log in to Admin Console
+2. Create a new realm named {demo}
+3. Create a new client named {demo-app} with public access type, set its Valid Redirect URIs to * (not recommended for Production services)
+4. Create a new role with name {user}
+5. Create a new user with credentials {test}/{test} and assign {user} role
 
 Generate token:
 - POST https://20.231.88.141/auth/realms/demo/protocol/openid-connect/token  
